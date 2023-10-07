@@ -1,0 +1,31 @@
+{
+  "name": "orsdocs",
+  "version": "1.0.0",
+  "description": "Create, edit, and print documents ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx electronmon .",
+    "start": "npx electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oriolgds/OrsDocs.git"
+  },
+  "keywords": [
+    "documents",
+    "create",
+    "edit"
+  ],
+  "author": "oriolgds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oriolgds/OrsDocs/issues"
+  },
+  "homepage": "https://github.com/oriolgds/OrsDocs#readme",
+  "devDependencies": {
+    "electron": "^26.3.0"
+  },
+  "dependencies": {
+    "electronmon": "^2.0.2"
+  }
+}
