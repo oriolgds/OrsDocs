@@ -11,7 +11,7 @@ function createWindow() {
   });
 
   // Load your HTML file
-  window.loadFile('index.html');
+  window.loadFile('render/index.html');
   window.minimize()
   // Create a custom menu
   const menuTemplate = [];

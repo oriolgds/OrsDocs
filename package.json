@@ -26,6 +26,7 @@
     "electron": "^26.3.0"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.1",
     "electronmon": "^2.0.2"
   }
 }
