@@ -28,6 +28,12 @@
   <nav class="command-bar">
     <button class="little" onclick="document.execCommand('bold', false, null);"><i class="bi bi-type-bold"></i></button>
     <button class="little" onclick="document.execCommand('italic', false, null);"><i class="bi bi-type-italic"></i></button>
+    <select id="fontSelect" onchange="changeFont()">
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="Times New Roman, serif">Times New Roman</option>
+      <option value="Verdana, sans-serif">Verdana</option>
+      <!-- Agrega más opciones de fuentes según sea necesario -->
+  </select>
   </nav>
   <div id="editor" contenteditable="true">
     This is your text editor. You can write here.
@@ -40,6 +46,7 @@
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/toolbarBtn.js"></script>
+  <script src="js/editor.js"></script>
   <script>
     setInterval(() => {
       console.log(document.getElementById('editor').innerHTML);

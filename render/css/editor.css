@@ -1,5 +1,6 @@
 #editor {
-    margin: 10px 8px;
+    margin: 0px 8px;
     outline: none;
     border: none;
+    padding: 10px;
 }

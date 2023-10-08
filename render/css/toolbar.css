@@ -33,8 +33,10 @@ toolbar {
   gap: 5px;
   padding-left: 5px;
   padding-right: 5px;
+  scroll-snap-type: x mandatory;
 }
 toolbar iconButton, toolbar h2 {
+  scroll-snap-align: center;
   transition: 500ms background-color, 300ms;
   background-color: #e2e2e2;
   width: 40px;
