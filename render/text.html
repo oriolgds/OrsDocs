@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Editor</title>
+    <style>
+        #editor {
+            width: 80%;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-family: Arial, sans-serif; /* Fuente predeterminada */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="boldText()">Bold</button>
+        <button onclick="italicizeText()">Italic</button>
+        <label for="fontSelect">Font:</label>
+        <select id="fontSelect" onchange="changeFont()">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <!-- Agrega más opciones de fuentes según sea necesario -->
+        </select>
+    </div>
+    <div id="editor" contenteditable="true">
+        This is your text editor. You can write here.
+    </div>
+
+    <script>
+        function boldText() {
+            document.execCommand("bold", false, null);
+        }
+
+        function italicizeText() {
+            document.execCommand("italic", false, null);
+        }
+
+        function changeFont() {
+            var font = document.getElementById("fontSelect").value;
+            var editor = document.getElementById("editor");
+            
+            var selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                var range = selection.getRangeAt(0);
+                var span = document.createElement("span");
+                span.style.fontFamily = font;
+                range.surroundContents(span);
+            }
+        }
+    </script>
+</body>
+</html>
